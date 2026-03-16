@@ -19,7 +19,6 @@ const mainLinks = [
 const moreLinks = [
   { href: "/givings", label: "Givings" },
   { href: "/healing-school", label: "Healing School" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/prayer-request", label: "Prayer Request" },
   { href: "/devotionals", label: "Devotionals" },
   { href: "/live", label: "Watch Live" },
