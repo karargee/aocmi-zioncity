@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import SalvationForm from "./SalvationForm";
+import PhotoLightbox from "@/components/PhotoLightbox";
 
 export default async function HomePage() {
   const messages = await prisma.message.findMany({ orderBy: { id: "desc" }, take: 4 });
@@ -255,17 +256,7 @@ export default async function HomePage() {
             <span className="purple-text">Moments</span>
             <h2 className="section-title mt-2">Life at Zion City</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-            {[1,2,3,4,5,6,7,8].map((n) => (
-              <div key={n} className="overflow-hidden rounded-xl group">
-                <img
-                  src={`/img/church-${n}.jpg`}
-                  alt={`Church moment ${n}`}
-                  className="w-full h-36 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          <PhotoLightbox images={[1,2,3,4,5,6,7,8].map(n => `/img/church-${n}.jpg`)} />
         </div>
       </section>
 
