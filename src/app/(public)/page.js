@@ -149,6 +149,20 @@ export default async function HomePage() {
               controls
               loop
               playsInline
+              className="rounded-2xl w-full shadow-xl mb-4"
+            />
+            <video
+              src="/videos/video_2026-03-16_21-49-23.mp4"
+              controls
+              loop
+              playsInline
+              className="rounded-2xl w-full shadow-xl mb-4"
+            />
+            <video
+              src="/videos/video_2026-03-16_21-55-50.mp4"
+              controls
+              loop
+              playsInline
               className="rounded-2xl w-full shadow-xl"
             />
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#1a237e] rounded-2xl -z-10" />
@@ -256,7 +270,23 @@ export default async function HomePage() {
             <span className="purple-text">Pictorial Moments</span>
             <h2 className="section-title mt-2">Life at AOCMI-ZIONCITY</h2>
           </div>
-          <PhotoLightbox images={[1,2,3,4,5,6,7,8].map(n => `/img/church-${n}.jpg`)} />
+          <PhotoLightbox images={[
+            ...Array.from({length: 12}, (_, i) => `/img/church-${i+1}.jpg`),
+            "/img/photo_2026-02-14_20-08-03.jpg",
+            "/img/photo_2026-02-14_20-08-04.jpg",
+            "/img/photo_2026-02-19_21-01-51.jpg",
+            "/img/photo_2026-02-19_21-01-52.jpg",
+            "/img/photo_2026-02-19_21-01-53.jpg",
+            "/img/photo_2026-02-26_21-36-17.jpg",
+            "/img/photo_2026-03-16_21-51-09.jpg",
+            "/img/photo_2026-03-16_21-53-52.jpg",
+            "/img/photo_2026-03-16_21-54-09.jpg",
+            "/img/photo_2026-03-16_21-54-37.jpg",
+            "/img/photo_2026-03-16_21-54-46.jpg",
+            "/img/photo_2026-03-16_21-54-50.jpg",
+            "/img/photo_2026-03-16_21-55-24.jpg",
+            "/img/photo_2026-03-16_21-55-31.jpg",
+          ]} />
         </div>
       </section>
 
