@@ -9,6 +9,7 @@ import SearchModal from "./SearchModal";
 const mainLinks = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About" },
+  { href: "/president", label: "The President" },
   { href: "/our-messages", label: "Messages" },
   { href: "/events", label: "Events" },
   { href: "/our-music", label: "Music" },
