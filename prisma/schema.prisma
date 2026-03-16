@@ -1,0 +1,223 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+model User {
+  id                 Int        @id @default(autoincrement())
+  name               String
+  email              String     @unique
+  emailVerifiedAt    DateTime?  @map("email_verified_at")
+  password           String
+  rememberToken      String?    @map("remember_token")
+  isSuperAdmin       Boolean    @default(false) @map("is_super_admin")
+  suspended          Boolean    @default(false)
+  deleted            Boolean    @default(false)
+  passwordUpdatedAt  DateTime?  @map("password_updated_at")
+  createdAt          DateTime   @default(now()) @map("created_at")
+  updatedAt          DateTime   @updatedAt @map("updated_at")
+  messages           Message[]
+  events             Event[]
+  stores             Store[]
+  musics             Music[]
+
+  @@map("users")
+}
+
+model Message {
+  id          Int           @id @default(autoincrement())
+  userId      Int           @map("user_id")
+  title       String
+  image       String
+  description String
+  link        String
+  slug        String?       @unique
+  seriesId    Int?          @map("series_id")
+  seriesOrder Int?          @map("series_order")
+  createdAt   DateTime      @default(now()) @map("created_at")
+  updatedAt   DateTime      @updatedAt @map("updated_at")
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  series      SermonSeries? @relation(fields: [seriesId], references: [id], onDelete: SetNull)
+
+  @@map("messages")
+}
+
+model SermonSeries {
+  id          Int       @id @default(autoincrement())
+  title       String
+  slug        String    @unique
+  description String    @default("")
+  image       String    @default("")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  messages    Message[]
+
+  @@map("sermon_series")
+}
+
+model Devotional {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  content   String
+  image     String   @default("")
+  scripture String   @default("")
+  published Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("devotionals")
+}
+
+model Announcement {
+  id        Int      @id @default(autoincrement())
+  text      String
+  link      String   @default("")
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("announcements")
+}
+
+model Event {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @map("user_id")
+  title       String
+  image       String
+  description String
+  dateOfEvent String   @map("date_of_event")
+  slug        String?  @unique
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("events")
+}
+
+model Music {
+  id        Int      @id @default(autoincrement())
+  title     String
+  userId    Int      @map("user_id")
+  img       String
+  desc      String
+  track     String
+  slug      String?  @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("music")
+}
+
+model Store {
+  id             Int      @id @default(autoincrement())
+  userId         Int      @map("user_id")
+  title          String
+  img            String
+  linkToResource String   @map("link_to_resource")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("stores")
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  fullname  String
+  email     String
+  phone     String
+  location  String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("contacts")
+}
+
+model HealingSchoolEntry {
+  id        Int      @id @default(autoincrement())
+  fullname  String
+  email     String
+  phone     String
+  state     String
+  city      String
+  problem   String
+  narration String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("healing_school_entries")
+}
+
+model WordOfTheYear {
+  id          Int      @id @default(autoincrement())
+  title       String
+  img         String
+  description String
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("word_of_the_years")
+}
+
+model ChurchUnit {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("church_units")
+}
+
+model Worker {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  address   String
+  unit      String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("workers")
+}
+
+model GalleryPhoto {
+  id        Int      @id @default(autoincrement())
+  title     String
+  img       String
+  category  String   @default("general")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("gallery_photos")
+}
+
+model PrayerRequest {
+  id        Int      @id @default(autoincrement())
+  fullname  String
+  email     String
+  phone     String?
+  request   String
+  isRead    Boolean  @default(false) @map("is_read")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("prayer_requests")
+}
+
+model Newsletter {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("newsletters")
+}
+
+
