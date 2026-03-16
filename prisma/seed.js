@@ -21,9 +21,9 @@ async function main() {
   if (!woty) {
     await prisma.wordOfTheYear.create({
       data: {
-        title: "Word of the Year",
-        img: "placeholder.jpg",
-        description: "Update this from the admin dashboard.",
+        title: "Grace, Mercy and Peace",
+        img: "word-of-the-year-2026.jpg",
+        description: "This is our prophetic declaration for the year. We walk in the fullness of God's grace, mercy, and peace in every area of our lives.",
       },
     });
     console.log("Word of the year placeholder created.");
