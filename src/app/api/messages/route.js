@@ -36,6 +36,8 @@ export async function POST(req) {
   const desc = form.get("desc");
   const link = form.get("link");
   const img = form.get("img");
+  const seriesId = form.get("seriesId");
+  const seriesOrder = form.get("seriesOrder");
   if (!title || !desc || !link || !img)
     return NextResponse.json({ error: "All fields required" }, { status: 400 });
   const image = await saveFile(img, "messages");
@@ -47,6 +49,8 @@ export async function POST(req) {
       description: desc,
       link,
       slug: makeSlug(title),
+      seriesId: seriesId ? parseInt(seriesId) : null,
+      seriesOrder: seriesOrder ? parseInt(seriesOrder) : null,
     },
   });
   return NextResponse.json(message, { status: 201 });

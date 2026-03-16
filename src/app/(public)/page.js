@@ -54,7 +54,7 @@ export default async function HomePage() {
           </h1>
           <h1 className="animate-fade-in-scale animate-delay-2 text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
             <span className="hero-gradient-text">
-              Ministry International
+              Ministries International
             </span>
           </h1>
 
@@ -102,8 +102,8 @@ export default async function HomePage() {
           <h2 className="section-title mt-2">Join Our Faith Journey</h2>
           <p className="section-subtitle">
             A journey and experience devoted to and aimed at expository preaching
-            and teaching of God&apos;s word. We believe development must be an
-            enjoyable and creative experience to be truly fulfilling.
+            and teaching of God&apos;s word. We believe spiritual development must be an
+            enjoyable and practical experience to be truly fulfilling.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {[
@@ -130,9 +130,9 @@ export default async function HomePage() {
             <span className="purple-text">Online</span>
             <h2 className="text-3xl md:text-4xl font-bold my-4">Join Our Service Online</h2>
             <p className="text-gray-500 mb-6 leading-relaxed">
-              Experience the power of fellowship and connection like never before.
-              Whether you&apos;re at home or on the go, join us for powerful worship
-              and the Word of God.
+              Join us for powerful worship experience and practical teachings of
+              God&apos;s word like never before. Whether you&apos;re at home or on the go,
+              connect with us online.
             </p>
             <div className="flex gap-3">
               <Link href="/events" className="btn-blue text-sm">
@@ -167,7 +167,7 @@ export default async function HomePage() {
           <div className="order-1 md:order-2">
             <span className="purple-text">Zion City — The Heavenly Jerusalem</span>
             <h2 className="text-3xl md:text-4xl font-bold my-4">
-              Ambassadors of Christ Ministry International
+              Ambassadors of Christ Ministries International
             </h2>
             <p className="text-gray-500 mb-6 leading-relaxed">
               The Ambassadors of Christ Ministry (Zion City) is called with the
@@ -186,7 +186,7 @@ export default async function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Listen & Learn</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">Latest Messages</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2">Download & Listen to Our Latest Messages</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {messages.length > 0 ? (
@@ -253,8 +253,8 @@ export default async function HomePage() {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <span className="purple-text">Moments</span>
-            <h2 className="section-title mt-2">Life at Zion City</h2>
+            <span className="purple-text">Pictorial Moments</span>
+            <h2 className="section-title mt-2">Life at AOCMI-ZIONCITY</h2>
           </div>
           <PhotoLightbox images={[1,2,3,4,5,6,7,8].map(n => `/img/church-${n}.jpg`)} />
         </div>

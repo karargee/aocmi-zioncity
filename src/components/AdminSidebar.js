@@ -8,6 +8,7 @@ const adminLinks = [
   { href: "/admin/salvation-entries", label: "All Salvation Entries", icon: "fa-envelope" },
   { href: "/admin/healing-school", label: "Healing School", icon: "fa-envelope" },
   { href: "/admin/messages", label: "Messages", icon: "fa-music" },
+  { href: "/admin/sermon-series", label: "Sermon Series", icon: "fa-layer-group" },
   { href: "/admin/events", label: "Events", icon: "fa-calendar" },
   { href: "/admin/store", label: "Store", icon: "fa-book" },
   { href: "/admin/music", label: "Music", icon: "fa-music" },

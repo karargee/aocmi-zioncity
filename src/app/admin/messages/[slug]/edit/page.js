@@ -5,11 +5,13 @@ import { useRouter, useParams } from "next/navigation";
 export default function EditMessage() {
   const { slug } = useParams();
   const [msg, setMsg] = useState(null);
+  const [series, setSeries] = useState([]);
   const [error, setError] = useState("");
   const router = useRouter();
 
   useEffect(() => {
-    fetch(`/api/messages/${slug}`).then((r) => r.json()).then(setMsg);
+    fetch(`/api/messages/${slug}`).then(r => r.json()).then(setMsg);
+    fetch("/api/sermon-series").then(r => r.json()).then(d => setSeries(d.series || []));
   }, [slug]);
 
   async function handleSubmit(e) {
@@ -30,6 +32,14 @@ export default function EditMessage() {
         <input name="title" defaultValue={msg.title} required className="w-full border p-3 rounded" />
         <textarea name="desc" defaultValue={msg.description} required rows={4} className="w-full border p-3 rounded" />
         <input name="link" defaultValue={msg.link} required className="w-full border p-3 rounded" />
+        <div>
+          <label className="block text-sm mb-1">Sermon Series (optional)</label>
+          <select name="seriesId" defaultValue={msg.seriesId || ""} className="w-full border p-3 rounded">
+            <option value="">— No Series —</option>
+            {series.map(s => <option key={s.id} value={s.id}>{s.title}</option>)}
+          </select>
+        </div>
+        <input name="seriesOrder" type="number" defaultValue={msg.seriesOrder || ""} placeholder="Order in series (e.g. 1, 2, 3)" className="w-full border p-3 rounded" />
         <div>
           <label className="block text-sm mb-1">Cover Image</label>
           <input name="img" type="file" accept="image/*" className="w-full" />
