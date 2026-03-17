@@ -6,7 +6,7 @@ export default function PresidentPage() {
         style={{ background: "linear-gradient(135deg, #0a1128 0%, #1a237e 100%)" }}
       >
         <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Our Dear Man of God</span>
-        <h1 className="text-4xl md:text-5xl font-bold mt-2">The President</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-2">Our Dear Man of God</h1>
       </div>
 
       <section className="py-16">
