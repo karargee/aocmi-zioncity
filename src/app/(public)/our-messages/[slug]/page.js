@@ -28,6 +28,9 @@ export default async function ShowMessage({ params }) {
             <i className="fas fa-download mr-2" /> Download / Listen
           </a>
         )}
+        <a href="https://t.me/zioncitymessages" target="_blank" className="btn-blue inline-block ml-3">
+          <i className="fab fa-telegram mr-2" /> Download on Telegram
+        </a>
         <div className="mt-8">
           <Link href="/our-messages" className="text-[#1a237e] font-semibold text-sm hover:underline">
             ← Back to Messages
