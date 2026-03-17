@@ -5,7 +5,7 @@ export default function PresidentPage() {
         className="pt-32 pb-20 text-white text-center"
         style={{ background: "linear-gradient(135deg, #0a1128 0%, #1a237e 100%)" }}
       >
-        <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Leadership</span>
+        <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Our Dear Man of God</span>
         <h1 className="text-4xl md:text-5xl font-bold mt-2">The President</h1>
       </div>
 
