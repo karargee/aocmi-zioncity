@@ -200,24 +200,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* PPS Teachings */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <span className="purple-text">Teachings</span>
-            <h2 className="section-title mt-2">PPS Teachings</h2>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <video
-              src="/videos/video_2026-03-16_21-55-50.mp4"
-              controls
-              loop
-              playsInline
-              className="rounded-2xl w-full shadow-xl"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Messages */}
       <section className="py-16 bg-blue-gradient text-white">
