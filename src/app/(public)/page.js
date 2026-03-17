@@ -149,20 +149,6 @@ export default async function HomePage() {
               controls
               loop
               playsInline
-              className="rounded-2xl w-full shadow-xl mb-4"
-            />
-            <video
-              src="/videos/video_2026-03-16_21-49-23.mp4"
-              controls
-              loop
-              playsInline
-              className="rounded-2xl w-full shadow-xl mb-4"
-            />
-            <video
-              src="/videos/video_2026-03-16_21-55-50.mp4"
-              controls
-              loop
-              playsInline
               className="rounded-2xl w-full shadow-xl"
             />
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#1a237e] rounded-2xl -z-10" />
@@ -191,6 +177,32 @@ export default async function HomePage() {
             <Link href="/about-us" className="btn-blue text-sm">
               Learn More &nbsp;<i className="fas fa-arrow-right" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Afro Gospel Sunday */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="purple-text">Events</span>
+            <h2 className="section-title mt-2">Afro Gospel Sunday</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <video
+              src="/videos/video_2026-03-16_21-49-23.mp4"
+              controls
+              loop
+              playsInline
+              className="rounded-2xl w-full shadow-xl"
+            />
+            <video
+              src="/videos/video_2026-03-16_21-55-50.mp4"
+              controls
+              loop
+              playsInline
+              className="rounded-2xl w-full shadow-xl"
+            />
           </div>
         </div>
       </section>
