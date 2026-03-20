@@ -34,9 +34,13 @@ export default function GivingsPage() {
 
           <div className="bg-[#1a237e] text-white p-8 rounded-2xl">
             <h3 className="text-xl font-bold mb-3">How to Give</h3>
-            <p className="text-white/80 mb-2">
-              For giving details and bank information, please contact the church office:
+            <p className="text-white/80 mb-6">
+              Scan the barcode below or use the bank details to send your givings:
             </p>
+            <div className="flex justify-center mb-6">
+              <img src="/img/bar-code.png" alt="Payment Barcode" className="rounded-xl max-w-[250px] w-full" />
+            </div>
+            <p className="text-white/70 text-sm">For enquiries, contact:</p>
             <p className="text-lg font-bold">+234 902 729 3178</p>
             <p className="text-white/70">hello@aocmi.com</p>
           </div>
