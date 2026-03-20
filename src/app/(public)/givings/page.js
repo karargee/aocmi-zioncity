@@ -33,12 +33,10 @@ export default function GivingsPage() {
           </div>
 
           <div className="bg-[#1a237e] text-white p-8 rounded-2xl">
-            <h3 className="text-xl font-bold mb-3">How to Give</h3>
-            <p className="text-white/80 mb-6">
-              Scan the barcode below or use the bank details to send your givings:
-            </p>
-            <div className="flex justify-center mb-6">
-              <img src="/img/bar-code.png" alt="Payment Barcode" className="rounded-xl max-w-[250px] w-full" />
+            <h3 className="text-xl font-bold mb-6">Bank Account Details</h3>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <img src="/img/giving-1.jpg" alt="Account Details" className="rounded-xl w-full" />
+              <img src="/img/giving-2.jpg" alt="Account Details" className="rounded-xl w-full" />
             </div>
             <p className="text-white/70 text-sm">For enquiries, contact:</p>
             <p className="text-lg font-bold">+234 902 729 3178</p>

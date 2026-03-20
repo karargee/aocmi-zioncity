@@ -24,8 +24,9 @@ export default async function DevotionalsPage() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="flex justify-center mb-10">
-          <img src="/img/apokalopsis.png" alt="Apokalupsis" className="rounded-2xl max-w-md w-full shadow-xl" />
+        <div className="flex justify-center gap-4 mb-10">
+          <img src="/img/apokalopsis.png" alt="Apokalupsis" className="rounded-2xl max-w-xs w-full shadow-xl" />
+          <img src="/img/apokalupsis-account.jpg" alt="Apokalupsis Account" className="rounded-2xl max-w-xs w-full shadow-xl" />
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {devotionals.map((d) => (
