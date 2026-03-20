@@ -144,13 +144,6 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="relative">
-            <video
-              src="/videos/church-highlight.mp4"
-              controls
-              loop
-              playsInline
-              className="rounded-2xl w-full shadow-xl"
-            />
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#1a237e] rounded-2xl -z-10" />
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-200 rounded-2xl -z-10" />
           </div>
