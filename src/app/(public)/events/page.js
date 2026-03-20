@@ -36,10 +36,6 @@ export default async function EventsPage({ searchParams }) {
               <video src="/videos/video_2026-03-16_21-49-23.mp4" controls loop playsInline className="rounded-2xl w-full shadow-xl" />
               <p className="text-center text-sm font-semibold mt-3">Afro Gospel Sunday</p>
             </div>
-            <div>
-              <video src="/videos/video_2026-03-16_21-55-50.mp4" controls loop playsInline className="rounded-2xl w-full shadow-xl" />
-              <p className="text-center text-sm font-semibold mt-3">PPS Teachings</p>
-            </div>
           </div>
         </div>
 

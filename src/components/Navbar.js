@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import DarkModeToggle from "./DarkModeToggle";
 import SearchModal from "./SearchModal";
 
 const mainLinks = [
@@ -93,12 +92,12 @@ export default function Navbar() {
               {moreOpen && (
                 <>
                   <div className="fixed inset-0" onClick={() => setMoreOpen(false)} />
-                  <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-xl py-2 min-w-[200px] border dark:border-gray-700">
+                  <div className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-xl py-2 min-w-[200px] border">
                     {moreLinks.map((l) => (
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 hover:bg-[#1a237e]/5 dark:hover:bg-white/5 hover:text-[#1a237e] transition-colors"
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-[#1a237e]/5 hover:text-[#1a237e] transition-colors"
                       >
                         {l.label}
                       </Link>
@@ -117,7 +116,6 @@ export default function Navbar() {
             >
               <i className="fas fa-search" />
             </button>
-            <DarkModeToggle />
             <div className="flex gap-1">
               {socials.map((s) => (
                 <a
@@ -166,7 +164,6 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex items-center gap-3 pt-4 border-t border-white/10 mt-3">
-                <DarkModeToggle />
                 {socials.map((s) => (
                   <a key={s.icon} href={s.href} target="_blank" className="text-white/60 hover:text-white p-2">
                     <i className={`fab ${s.icon}`} />
