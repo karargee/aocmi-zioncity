@@ -16,7 +16,7 @@ export default function LivePage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="aspect-video rounded-2xl overflow-hidden shadow-xl mb-10">
           <iframe
-            src="https://www.youtube.com/embed/live_stream?channel=UCaocmizioncity808"
+            src="https://www.youtube.com/embed/live_stream?channel=UCaocmizioncity"
             title="AOCMI Zion City Live"
             className="w-full h-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -45,7 +45,7 @@ export default function LivePage() {
             Missed a service? Catch up on all our past messages and events on YouTube.
           </p>
           <a
-            href="https://youtube.com/@aocmizioncity808"
+            href="https://youtube.com/@aocmizioncity"
             target="_blank"
             className="bg-red-600 text-white px-8 py-3.5 rounded-full inline-flex items-center gap-2 font-bold hover:bg-red-700 transition shadow-md"
           >

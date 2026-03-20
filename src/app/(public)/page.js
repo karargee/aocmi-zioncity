@@ -352,7 +352,7 @@ export default async function HomePage() {
             <h2 className="text-2xl font-bold mt-1 mb-2">Follow Us</h2>
             <p className="text-gray-400 text-sm mb-5">Learn, engage and grow with us</p>
             {[
-              ["https://youtube.com/@aocmizioncity808", "fa-youtube", "YouTube", "bg-red-50 text-red-500"],
+              ["https://youtube.com/@aocmizioncity", "fa-youtube", "YouTube", "bg-red-50 text-red-500"],
               ["https://instagram.com/aocmizioncity", "fa-instagram", "Instagram", "bg-pink-50 text-pink-500"],
               ["https://www.facebook.com/aocmizioncity", "fa-facebook", "Facebook", "bg-blue-50 text-blue-600"],
               ["https://twitter.com/aocmizioncity", "fa-twitter", "Twitter", "bg-sky-50 text-sky-400"],

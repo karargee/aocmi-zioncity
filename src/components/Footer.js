@@ -18,7 +18,7 @@ const connectLinks = [
 ];
 
 const socials = [
-  { href: "https://youtube.com/@aocmizioncity808", icon: "fa-youtube", label: "YouTube" },
+  { href: "https://youtube.com/@aocmizioncity", icon: "fa-youtube", label: "YouTube" },
   { href: "https://instagram.com/aocmizioncity", icon: "fa-instagram", label: "Instagram" },
   { href: "https://www.facebook.com/aocmizioncity", icon: "fa-facebook", label: "Facebook" },
   { href: "https://twitter.com/aocmizioncity", icon: "fa-twitter", label: "Twitter" },
