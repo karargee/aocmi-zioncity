@@ -292,7 +292,7 @@ export default async function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="purple-text">Pictorial Moments</span>
-            <h2 className="section-title mt-2">Life at AOCMI-ZIONCITY</h2>
+            <h2 className="section-title mt-2">Live at AOCMI-ZIONCITY</h2>
           </div>
           <PhotoLightbox images={[
             ...Array.from({length: 12}, (_, i) => `/img/church-${i+1}.jpg`),
