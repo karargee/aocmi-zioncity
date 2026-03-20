@@ -258,10 +258,13 @@ export default async function HomePage() {
               <p className="col-span-4 text-center text-white/60">No messages uploaded yet</p>
             )}
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/our-messages" className="btn-outline">
               View All Messages
             </Link>
+            <a href="https://t.me/zioncitymessages" target="_blank" className="btn-outline">
+              <i className="fab fa-telegram mr-2" /> Download on Telegram
+            </a>
           </div>
         </div>
       </section>
