@@ -34,6 +34,12 @@ export default async function MessagesPage({ searchParams }) {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="text-center mb-6">
+          <a href="https://t.me/zioncitymessages" target="_blank" className="btn-blue text-sm inline-flex items-center gap-2">
+            <i className="fab fa-telegram" /> Download Messages on Telegram
+          </a>
+        </div>
+
         <form className="max-w-lg mx-auto mb-6 flex gap-2">
           <input
             name="search"

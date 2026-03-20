@@ -25,6 +25,24 @@ export default async function EventsPage({ searchParams }) {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Event Videos */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <span className="purple-text">Watch</span>
+            <h2 className="section-title mt-2">Event Highlights</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div>
+              <video src="/videos/video_2026-03-16_21-49-23.mp4" controls loop playsInline className="rounded-2xl w-full shadow-xl" />
+              <p className="text-center text-sm font-semibold mt-3">Afro Gospel Sunday</p>
+            </div>
+            <div>
+              <video src="/videos/video_2026-03-16_21-55-50.mp4" controls loop playsInline className="rounded-2xl w-full shadow-xl" />
+              <p className="text-center text-sm font-semibold mt-3">PPS Teachings</p>
+            </div>
+          </div>
+        </div>
+
         <form className="max-w-lg mx-auto mb-10 flex gap-2">
           <input
             name="search"
