@@ -19,8 +19,8 @@ export default async function DevotionalsPage() {
         className="pt-32 pb-20 text-white text-center"
         style={{ background: "linear-gradient(135deg, #0a1128 0%, #1a237e 100%)" }}
       >
-        <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Daily Bread</span>
-        <h1 className="text-4xl md:text-5xl font-bold mt-2">Devotionals</h1>
+        <span className="text-white/60 uppercase tracking-[0.2em] text-sm">Our Celestial Harbinger</span>
+        <h1 className="text-4xl md:text-5xl font-bold mt-2">APOKALUPSIS</h1>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12">

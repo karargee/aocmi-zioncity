@@ -54,7 +54,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
-              Ambassador of Christ Ministry International — devoted to expository
+              Ambassador of Christ Ministries International — devoted to expository
               preaching and teaching of God&apos;s word.
             </p>
             <div className="flex gap-3">
@@ -131,12 +131,6 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/40">
           <p>&copy; {new Date().getFullYear()} AOCMI Zion City. All rights reserved.</p>
-          <p>
-            Built by{" "}
-            <a href="https://sney.netlify.app" target="_blank" className="text-white/60 hover:text-white underline">
-              Timothy Iloba
-            </a>
-          </p>
         </div>
       </div>
     </footer>

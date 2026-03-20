@@ -196,7 +196,7 @@ export default async function HomePage() {
               Ambassadors of Christ Ministries International
             </h2>
             <p className="text-gray-500 mb-6 leading-relaxed">
-              The Ambassadors of Christ Ministry (Zion City) is called with the
+              The Ambassadors of Christ Ministries (Zion City) is called with the
               main objective of propagating the gospel of reconciliation. We are a
               community of believers passionate about God&apos;s word and His presence.
             </p>

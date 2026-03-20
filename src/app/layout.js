@@ -4,17 +4,17 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: {
-    default: "AOCMI Zion City — Ambassadors of Christ Ministry International",
+    default: "AOCMI Zion City — Ambassadors of Christ Ministries International",
     template: "%s | AOCMI Zion City",
   },
   description:
-    "Ambassadors of Christ Ministry International (Zion City) — devoted to expository preaching and teaching of God's word. Join our faith journey in Jos, Nigeria.",
+    "Ambassadors of Christ Ministries International (Zion City) — devoted to expository preaching and teaching of God's word. Join our faith journey in Jos, Nigeria.",
   keywords: [
     "AOCMI", "Zion City", "church in Jos", "Ambassadors of Christ",
-    "Ministry International", "Christian ministry Nigeria", "expository preaching",
+    "Ministries International", "Christian ministry Nigeria", "expository preaching",
   ],
   openGraph: {
-    title: "AOCMI Zion City — Ambassadors of Christ Ministry International",
+    title: "AOCMI Zion City — Ambassadors of Christ Ministries International",
     description: "The joy of being in God's presence is an unparalleled experience. Join our faith journey.",
     url: "https://aocmi.com",
     siteName: "AOCMI Zion City",
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AOCMI Zion City",
-    description: "Ambassadors of Christ Ministry International — devoted to expository preaching and teaching of God's word.",
+    description: "Ambassadors of Christ Ministries International — devoted to expository preaching and teaching of God's word.",
     images: ["/img/home-page-1.png"],
   },
   metadataBase: new URL("https://aocmi.com"),

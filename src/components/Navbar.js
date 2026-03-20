@@ -20,7 +20,7 @@ const moreLinks = [
   { href: "/givings", label: "Givings" },
   { href: "/healing-school", label: "Healing School" },
   { href: "/prayer-request", label: "Prayer Request" },
-  { href: "/devotionals", label: "Devotionals" },
+  { href: "/devotionals", label: "Apokalupsis" },
   { href: "/live", label: "Watch Live" },
 ];
 

@@ -16,10 +16,10 @@ export default function AboutPage() {
           <div>
             <span className="purple-text">Zion City — The Heavenly Jerusalem</span>
             <h2 className="text-3xl font-bold my-4">
-              Ambassadors of Christ Ministry International
+              Ambassadors of Christ Ministries International
             </h2>
             <p className="text-gray-500 leading-relaxed mb-4">
-              The Ambassadors of Christ Ministry (Zion City) is called with the main
+              The Ambassadors of Christ Ministries (Zion City) is called with the main
               objective of propagating the gospel of reconciliation. We are devoted
               to and aimed at expository preaching and teaching of God&apos;s word.
             </p>
