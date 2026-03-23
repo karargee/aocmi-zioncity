@@ -12,6 +12,7 @@ const mainLinks = [
   { href: "/our-messages", label: "Messages" },
   { href: "/events", label: "Events" },
   { href: "/our-music", label: "Music" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/store", label: "Store" },
 ];
 

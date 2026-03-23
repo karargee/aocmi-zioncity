@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import SalvationForm from "./SalvationForm";
-import PhotoLightbox from "@/components/PhotoLightbox";
 
 export default async function HomePage() {
   const messages = await prisma.message.findMany({ orderBy: { id: "desc" }, take: 4 });
@@ -290,37 +289,25 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Photo Gallery Strip */}
+      {/* Photo Gallery Preview */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="purple-text">Pictorial Moments</span>
             <h2 className="section-title mt-2">Live at AOCMI-ZIONCITY</h2>
           </div>
-          <PhotoLightbox images={[
-            ...Array.from({length: 12}, (_, i) => `/img/church-${i+1}.jpg`),
-            "/img/photo_2026-02-14_20-08-03.jpg",
-            "/img/photo_2026-02-14_20-08-04.jpg",
-            "/img/photo_2026-02-19_21-01-51.jpg",
-            "/img/photo_2026-02-19_21-01-52.jpg",
-            "/img/photo_2026-02-19_21-01-53.jpg",
-            "/img/photo_2026-02-26_21-36-17.jpg",
-            "/img/photo_2026-03-01_18-05-20.jpg",
-            "/img/photo_2026-03-02_21-27-12.jpg",
-            "/img/photo_2026-03-16_21-51-09.jpg",
-            "/img/photo_2026-03-16_21-53-52.jpg",
-            "/img/photo_2026-03-16_21-54-09.jpg",
-            "/img/photo_2026-03-16_21-54-37.jpg",
-            "/img/photo_2026-03-16_21-54-46.jpg",
-            "/img/photo_2026-03-16_21-54-50.jpg",
-            "/img/photo_2026-03-16_21-55-24.jpg",
-            "/img/photo_2026-03-16_21-55-31.jpg",
-            "/img/photo_2026-03-19_19-15-04.jpg",
-            "/img/photo_2026-03-19_19-15-07.jpg",
-            "/img/photo_2026-03-19_21-41-28.jpg",
-            "/img/photo_2026-03-19_21-41-29.jpg",
-            "/img/photo_2026-03-19_21-41-30.jpg",
-          ]} />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {["/img/church-1.jpg","/img/church-2.jpg","/img/church-3.jpg","/img/church-4.jpg","/img/church-5.jpg","/img/church-6.jpg"].map((src) => (
+              <div key={src} className="overflow-hidden rounded-xl shadow-md">
+                <img src={src} alt="AOCMI" className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/gallery" className="btn-blue text-sm">
+              View Full Gallery &nbsp;<i className="fas fa-arrow-right" />
+            </Link>
+          </div>
         </div>
       </section>
 
