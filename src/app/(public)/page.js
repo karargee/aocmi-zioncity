@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import SalvationForm from "./SalvationForm";
 import AnimatedMission from "@/components/AnimatedMission";
+import LiveCountdown from "@/components/LiveCountdown";
 
 export default async function HomePage() {
   const messages = await prisma.message.findMany({ orderBy: { id: "desc" }, take: 4 });
@@ -94,6 +95,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <LiveCountdown />
 
       <AnimatedMission />
 
