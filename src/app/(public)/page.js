@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import SalvationForm from "./SalvationForm";
+import AnimatedMission from "@/components/AnimatedMission";
 
 export default async function HomePage() {
   const messages = await prisma.message.findMany({ orderBy: { id: "desc" }, take: 4 });
@@ -94,33 +95,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Faith Journey */}
-      <section className="py-20 text-center px-4">
-        <div className="max-w-3xl mx-auto">
-          <span className="purple-text">Our Mission</span>
-          <h2 className="section-title mt-2">Join Our Faith Journey</h2>
-          <p className="section-subtitle">
-            A journey and experience devoted to and aimed at expository preaching
-            and teaching of God&apos;s word. We believe spiritual development must be an
-            enjoyable and practical experience to be truly fulfilling.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mt-10">
-            {[
-              { icon: "fa-book-bible", title: "Word-Based", desc: "Grounded in expository preaching of scripture" },
-              { icon: "fa-hands-praying", title: "Spirit-Led", desc: "Guided by the Holy Spirit in all we do" },
-              { icon: "fa-people-group", title: "Community", desc: "Building genuine fellowship and connection" },
-            ].map((item) => (
-              <div key={item.title} className="p-6 rounded-xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-[#1a237e]/10 flex items-center justify-center mx-auto mb-4">
-                  <i className={`fas ${item.icon} text-[#1a237e] text-xl`} />
-                </div>
-                <h3 className="font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AnimatedMission />
 
       {/* Online Service */}
       <section className="py-16 bg-gray-50">
