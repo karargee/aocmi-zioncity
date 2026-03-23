@@ -213,11 +213,6 @@ export default async function HomePage() {
               className="rounded-2xl w-full shadow-xl"
             />
             <div>
-              <h3 className="text-2xl font-bold mb-4">Experience Afro Gospel</h3>
-              <p className="text-gray-500 leading-relaxed mb-6">
-                Join us for a powerful time of African gospel worship and praise.
-                A celebration of faith through music, culture, and the presence of God.
-              </p>
               <Link href="/events" className="btn-blue text-sm">
                 View Events &nbsp;<i className="fas fa-arrow-right" />
               </Link>
