@@ -32,11 +32,8 @@ export default function PresidentPage() {
       {/* Bio */}
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-10 items-start">
-            <div className="md:col-span-2">
-              <img src="/img/dr-prince-buma.jpg" alt="Dr. Prince Buma" className="rounded-2xl w-full shadow-xl sticky top-24" />
-            </div>
-            <div className="md:col-span-3 space-y-6 text-gray-600 leading-relaxed">
+          <div>
+            <div className="space-y-6 text-gray-600 leading-relaxed">
               <div>
                 <span className="purple-text">About</span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-1 mb-4 text-gray-900">A Man Called by God</h2>
