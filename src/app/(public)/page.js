@@ -156,7 +156,7 @@ export default async function HomePage() {
             <span className="purple-text">Teachings</span>
             <h2 className="section-title mt-2">PPS Teachings</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="max-w-3xl mx-auto">
             <video
               src="/videos/church-highlight.mp4"
               controls
@@ -164,13 +164,11 @@ export default async function HomePage() {
               playsInline
               className="rounded-2xl w-full shadow-xl"
             />
-            <video
-              src="/videos/video_2026-03-16_21-55-50.mp4"
-              controls
-              loop
-              playsInline
-              className="rounded-2xl w-full shadow-xl"
-            />
+            <div className="text-center mt-6">
+              <a href="https://youtube.com/@drprincebuma" target="_blank" className="btn-blue text-sm">
+                Watch More on YouTube &nbsp;<i className="fab fa-youtube" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
