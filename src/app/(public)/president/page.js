@@ -24,6 +24,9 @@ export default function PresidentPage() {
             <a href="https://instagram.com/drprincebuma" target="_blank" className="w-11 h-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition text-white">
               <i className="fab fa-instagram text-lg" />
             </a>
+            <a href="https://youtube.com/@drprincebuma" target="_blank" className="w-11 h-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition text-white">
+              <i className="fab fa-youtube text-lg" />
+            </a>
           </div>
         </div>
       </div>
@@ -136,14 +139,24 @@ export default function PresidentPage() {
         <div className="relative z-10 max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Connect with Dr. Prince Buma</h2>
           <p className="text-white/70 mb-8">Follow for teachings, updates, and inspiration</p>
-          <a
-            href="https://instagram.com/drprincebuma"
-            target="_blank"
-            className="bg-white text-[#1a237e] px-8 py-3.5 rounded-full inline-flex items-center gap-2 font-bold hover:bg-gray-100 transition shadow-md"
-          >
-            <i className="fab fa-instagram text-xl" />
-            Follow on Instagram
-          </a>
+          <div className="flex justify-center gap-4">
+            <a
+              href="https://instagram.com/drprincebuma"
+              target="_blank"
+              className="bg-white text-[#1a237e] px-8 py-3.5 rounded-full inline-flex items-center gap-2 font-bold hover:bg-gray-100 transition shadow-md"
+            >
+              <i className="fab fa-instagram text-xl" />
+              Instagram
+            </a>
+            <a
+              href="https://youtube.com/@drprincebuma"
+              target="_blank"
+              className="bg-red-600 text-white px-8 py-3.5 rounded-full inline-flex items-center gap-2 font-bold hover:bg-red-700 transition shadow-md"
+            >
+              <i className="fab fa-youtube text-xl" />
+              YouTube
+            </a>
+          </div>
         </div>
       </section>
     </>
