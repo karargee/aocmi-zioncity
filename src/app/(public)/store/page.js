@@ -40,18 +40,11 @@ export default async function StorePage() {
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
               <i className="fas fa-book-open text-[#1a237e]" /> Dr. Prince Buma&apos;s Books
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { title: "The Man God Uses" },
-                { title: "God's Generals" },
-              ].map((book) => (
-                <div key={book.title} className="bg-white rounded-xl shadow-sm p-6 text-center">
-                  <div className="w-14 h-14 rounded-full bg-[#1a237e]/10 flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-book text-[#1a237e] text-xl" />
-                  </div>
-                  <h4 className="font-bold text-sm">{book.title}</h4>
-                </div>
-              ))}
+            <div className="bg-gray-50 rounded-2xl p-8 text-center">
+              <div className="w-16 h-16 rounded-full bg-[#1a237e]/10 flex items-center justify-center mx-auto mb-4">
+                <i className="fas fa-book text-[#1a237e] text-2xl" />
+              </div>
+              <p className="text-gray-500">Will be available soon</p>
             </div>
           </div>
         </section>
