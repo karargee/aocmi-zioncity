@@ -28,16 +28,6 @@ export default function PresidentPage() {
         </div>
       </div>
 
-      {/* Quote */}
-      <section className="py-12 bg-[#1a237e] text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <i className="fas fa-quote-left text-white/20 text-4xl mb-4" />
-          <p className="text-lg md:text-xl italic leading-relaxed text-white/90">
-            &ldquo;Spiritual development must be an enjoyable and practical experience to be truly fulfilling.&rdquo;
-          </p>
-          <p className="text-white/50 text-sm mt-4">— Dr. Prince Buma</p>
-        </div>
-      </section>
 
       {/* Bio */}
       <section className="py-16">
