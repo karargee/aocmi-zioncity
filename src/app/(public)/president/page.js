@@ -39,7 +39,6 @@ export default function PresidentPage() {
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <div>
                 <span className="purple-text">About</span>
-                <h2 className="text-2xl md:text-3xl font-bold mt-1 mb-4 text-gray-900">A Man Called by God</h2>
               </div>
               <p>
                 Dr. Prince Buma is the founder and president of Ambassadors of Christ Ministries
