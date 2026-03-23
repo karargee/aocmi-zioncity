@@ -204,7 +204,7 @@ export default async function HomePage() {
             <span className="purple-text">Events</span>
             <h2 className="section-title mt-2">Afro Gospel Sunday</h2>
           </div>
-          <div className="max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <video
               src="/videos/video_2026-03-16_21-49-23.mp4"
               controls
@@ -212,6 +212,16 @@ export default async function HomePage() {
               playsInline
               className="rounded-2xl w-full shadow-xl"
             />
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Experience Afro Gospel</h3>
+              <p className="text-gray-500 leading-relaxed mb-6">
+                Join us for a powerful time of African gospel worship and praise.
+                A celebration of faith through music, culture, and the presence of God.
+              </p>
+              <Link href="/events" className="btn-blue text-sm">
+                View Events &nbsp;<i className="fas fa-arrow-right" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
