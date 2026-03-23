@@ -211,6 +211,18 @@ model PrayerRequest {
   @@map("prayer_requests")
 }
 
+model Testimony {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  testimony String
+  approved  Boolean  @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("testimonies")
+}
+
 model Newsletter {
   id        Int      @id @default(autoincrement())
   email     String   @unique

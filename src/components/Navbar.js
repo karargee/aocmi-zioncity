@@ -18,6 +18,7 @@ const mainLinks = [
 
 const moreLinks = [
   { href: "/givings", label: "Givings" },
+  { href: "/testimonies", label: "Testimonies" },
   { href: "/healing-school", label: "Healing School" },
   { href: "/prayer-request", label: "Prayer Request" },
   { href: "/devotionals", label: "Apokalupsis" },

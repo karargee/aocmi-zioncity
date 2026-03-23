@@ -17,6 +17,7 @@ const adminLinks = [
   { href: "/admin/change-password", label: "Update Password", icon: "fa-lock" },
   { href: "/admin/gallery", label: "Gallery", icon: "fa-images" },
   { href: "/admin/prayer-requests", label: "Prayer Requests", icon: "fa-pray" },
+  { href: "/admin/testimonies", label: "Testimonies", icon: "fa-comment" },
   { href: "/admin/newsletter", label: "Newsletter", icon: "fa-envelope-open" },
 ];
 
