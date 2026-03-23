@@ -45,8 +45,8 @@ export default async function StorePage() {
         {/* Materials Section */}
         <section className="mb-16">
           <div className="text-center mb-10">
-            <span className="purple-text">Merchandise</span>
-            <h2 className="section-title mt-2">Materials</h2>
+            <span className="purple-text">Ministries</span>
+            <h2 className="section-title mt-2">Ministries Materials</h2>
             <p className="text-gray-500 text-sm mt-2">Shirts, caps, crests and more</p>
           </div>
 
