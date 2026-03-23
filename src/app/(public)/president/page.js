@@ -17,6 +17,11 @@ export default function PresidentPage() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold">Dr. Prince Buma</h2>
             <p className="text-[#1a237e] font-semibold mt-2">Founder & President, AOCMI-ZION CITY</p>
+            <div className="flex justify-center gap-3 mt-4">
+              <a href="https://instagram.com/drprincebuma" target="_blank" className="w-10 h-10 rounded-full bg-pink-50 text-pink-500 flex items-center justify-center hover:bg-pink-100 transition">
+                <i className="fab fa-instagram" />
+              </a>
+            </div>
           </div>
 
           <div className="space-y-6 text-gray-600 leading-relaxed">
