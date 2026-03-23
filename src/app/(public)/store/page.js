@@ -21,6 +21,20 @@ export default async function StorePage() {
             <h2 className="section-title mt-2">Books</h2>
           </div>
 
+          {/* Apokalupsis */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <i className="fas fa-book text-[#1a237e]" /> Apokalupsis
+            </h3>
+            <div className="bg-gray-50 rounded-2xl p-6 text-center">
+              <img src="/img/apokalopsis.png" alt="Apokalupsis" className="rounded-xl max-w-[200px] mx-auto mb-4" />
+              <p className="text-gray-500 text-sm mb-4">Our celestial harbinger — devotional publications from AOCMI Zion City</p>
+              <a href="/devotionals" className="btn-blue text-sm inline-block">
+                View Apokalupsis →
+              </a>
+            </div>
+          </div>
+
           {/* Dr Prince Buma Books */}
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
