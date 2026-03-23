@@ -28,16 +28,14 @@ export default async function StorePage() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { img: "/img/the-man-God-uses.png", title: "The Man God Uses" },
-                { img: "/img/gods-generals.png", title: "God's Generals" },
+                { title: "The Man God Uses" },
+                { title: "God's Generals" },
               ].map((book) => (
-                <div key={book.title} className="bg-white rounded-xl shadow-sm overflow-hidden group">
-                  <div className="overflow-hidden">
-                    <img src={book.img} alt={book.title} className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div key={book.title} className="bg-white rounded-xl shadow-sm p-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-[#1a237e]/10 flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-book text-[#1a237e] text-xl" />
                   </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-sm">{book.title}</h4>
-                  </div>
+                  <h4 className="font-bold text-sm">{book.title}</h4>
                 </div>
               ))}
             </div>
