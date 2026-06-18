@@ -64,12 +64,12 @@ export default async function HomePage() {
           </p>
 
           <div className="animate-fade-in-up animate-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://youtube.com/@aocmizioncity" target="_blank" className="bg-red-600 text-white px-6 py-2.5 md:px-7 md:py-3 rounded-full font-semibold text-base hover:bg-red-700 transition-all duration-300 shadow-md hover:shadow-lg group">
+              Watch Live &nbsp;<i className="fab fa-youtube group-hover:scale-110 transition-transform" />
+            </a>
             <a href="https://t.me/zioncitymessages" className="btn-blue text-base group">
               Join Telegram &nbsp;<i className="fab fa-telegram group-hover:scale-110 transition-transform" />
             </a>
-            <Link href="/live" className="btn-outline text-base group">
-              Watch Live &nbsp;<i className="fas fa-play text-xs group-hover:translate-x-1 transition-transform" />
-            </Link>
           </div>
         </div>
       </div>
