@@ -35,6 +35,7 @@ const socials = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [socialOpen, setSocialOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
@@ -48,6 +49,7 @@ export default function Navbar() {
   useEffect(() => {
     setOpen(false);
     setMoreOpen(false);
+    setSocialOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -165,20 +167,32 @@ export default function Navbar() {
                   {l.label}
                 </Link>
               ))}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/10 mt-3">
-                {socials.map((s) => (
-                  <a key={s.icon} href={s.href} target="_blank" className="text-white/60 hover:text-white p-2">
-                    <i className={`fab ${s.icon}`} />
-                  </a>
-                ))}
+              <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-3">
+                <button
+                  onClick={() => setSocialOpen(!socialOpen)}
+                  className="text-white/80 text-sm flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-white/5"
+                >
+                  <i className="fas fa-share-alt" /> Socials
+                  <i className={`fas fa-chevron-down text-[10px] transition-transform ${socialOpen ? "rotate-180" : ""}`} />
+                </button>
                 <Link
                   href="/live"
-                  className="ml-auto bg-red-600 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5"
+                  className="bg-red-600 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1.5"
                 >
                   <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
                   LIVE
                 </Link>
               </div>
+              {socialOpen && (
+                <div className="mt-2 space-y-1 pl-3">
+                  {socials.map((s) => (
+                    <a key={s.icon} href={s.href} target="_blank" className="flex items-center gap-3 py-2 px-3 rounded-lg text-white/70 hover:bg-white/5 hover:text-white text-sm">
+                      <i className={`fab ${s.icon} w-5`} />
+                      {s.icon.replace("fa-", "").charAt(0).toUpperCase() + s.icon.replace("fa-", "").slice(1)}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}
