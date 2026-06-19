@@ -46,7 +46,7 @@ export default function Navbar() {
           <Image src="/img/logo.png" alt="AOCMI" width={48} height={48} className="h-10 md:h-12 w-auto" />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((l) => (
             <Link
               key={l.href}
