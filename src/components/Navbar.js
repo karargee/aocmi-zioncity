@@ -14,14 +14,24 @@ const navLinks = [
   { href: "/about-us", label: "About Us" },
 ];
 
+const mediaLinks = [
+  { href: "/our-music", label: "Music" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/devotionals", label: "Apokalupsis" },
+  { href: "/testimonies", label: "Testimonies" },
+];
+
 const socials = [
-  { href: "https://youtube.com/@aocmizioncity", icon: "fa-youtube" },
-  { href: "https://www.facebook.com/aocmizioncity", icon: "fa-facebook" },
-  { href: "https://instagram.com/aocmizioncity", icon: "fa-instagram" },
+  { href: "https://youtube.com/@aocmizioncity", icon: "fa-youtube", label: "YouTube" },
+  { href: "https://www.facebook.com/aocmizioncity", icon: "fa-facebook", label: "Facebook" },
+  { href: "https://instagram.com/aocmizioncity", icon: "fa-instagram", label: "Instagram" },
+  { href: "https://twitter.com/aocmizioncity", icon: "fa-twitter", label: "Twitter" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mediaOpen, setMediaOpen] = useState(false);
+  const [socialOpen, setSocialOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -31,7 +41,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setOpen(false); }, [pathname]);
+  useEffect(() => { setOpen(false); setMediaOpen(false); setSocialOpen(false); }, [pathname]);
 
   return (
     <nav
@@ -79,7 +89,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-[#0a1128] border-t border-white/10 mt-2">
+        <div className="lg:hidden bg-[#0a1128] border-t border-white/10 mt-2 max-h-[80vh] overflow-y-auto">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
             {navLinks.map((l) => (
               <Link
@@ -94,12 +104,59 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <div className="flex items-center gap-4 pt-4 border-t border-white/10 mt-3">
-              {socials.map((s) => (
-                <a key={s.icon} href={s.href} target="_blank" className="text-white/60 hover:text-white p-2">
-                  <i className={`fab ${s.icon}`} />
-                </a>
-              ))}
+
+            {/* Media Dropdown */}
+            <div className="pt-2">
+              <button
+                onClick={() => { setMediaOpen(!mediaOpen); setSocialOpen(false); }}
+                className="w-full flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-white/80 hover:bg-white/5"
+              >
+                <span className="flex items-center gap-2">
+                  <i className="fas fa-photo-film text-xs" /> Media
+                </span>
+                <i className={`fas fa-chevron-down text-[10px] transition-transform ${mediaOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mediaOpen && (
+                <div className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-3">
+                  {mediaLinks.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className="block py-2 px-3 rounded-lg text-sm text-white/60 hover:bg-white/5 hover:text-white"
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Socials Dropdown */}
+            <div>
+              <button
+                onClick={() => { setSocialOpen(!socialOpen); setMediaOpen(false); }}
+                className="w-full flex items-center justify-between py-2.5 px-3 rounded-lg text-sm text-white/80 hover:bg-white/5"
+              >
+                <span className="flex items-center gap-2">
+                  <i className="fas fa-share-alt text-xs" /> Socials
+                </span>
+                <i className={`fas fa-chevron-down text-[10px] transition-transform ${socialOpen ? "rotate-180" : ""}`} />
+              </button>
+              {socialOpen && (
+                <div className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-3">
+                  {socials.map((s) => (
+                    <a
+                      key={s.icon}
+                      href={s.href}
+                      target="_blank"
+                      className="flex items-center gap-3 py-2 px-3 rounded-lg text-sm text-white/60 hover:bg-white/5 hover:text-white"
+                    >
+                      <i className={`fab ${s.icon} w-4`} />
+                      {s.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
